@@ -1,0 +1,464 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: calc(68px + 2rem) 1.5rem 5rem;
+}
+
+/* ── Page Header ── */
+.pageHeader { margin-bottom: 2rem; }
+.pageTitle {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -.03em;
+  margin-bottom: .3rem;
+}
+.pageSubtitle { font-size: .85rem; color: #64748b; font-weight: 500; }
+
+.formDotSm {
+  width: 22px; height: 22px;
+  border-radius: 6px;
+  font-size: .6rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Teams List ── */
+.teamsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.teamCard {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  transition: box-shadow .2s, transform .2s;
+}
+.teamCard:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,.11);
+  transform: translateY(-2px);
+}
+
+.teamCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 1.1rem 1.1rem .9rem;
+}
+
+.teamCardCrest {
+  width: 52px; height: 52px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .95rem;
+  font-weight: 900;
+  flex-shrink: 0;
+  letter-spacing: .02em;
+}
+
+.teamCardHeaderInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.teamCardRank {
+  font-size: .65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.teamCardName {
+  font-size: .98rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.teamCardDivider {
+  height: 1px;
+  background: #f1f5f9;
+  margin: 0 1.1rem;
+}
+
+.teamCardMeta {
+  display: flex;
+  padding: .85rem 1.1rem;
+  gap: 0;
+}
+
+.teamCardMetaItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-right: .75rem;
+  border-right: 1px solid #f1f5f9;
+}
+.teamCardMetaItem:last-child { border-right: none; padding-right: 0; padding-left: .75rem; }
+.teamCardMetaItem:first-child { padding-left: 0; }
+
+.teamCardMetaLabel {
+  font-size: .58rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.teamCardMetaVal {
+  font-size: .78rem;
+  font-weight: 700;
+  color: #334155;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Hero Banner ── */
+.heroBanner {
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.heroBannerBg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0f172a 60%, var(--team-color, #16a34a) 140%);
+}
+.heroBannerContent {
+  position: relative;
+  padding: 1.5rem 2rem 2rem;
+}
+.heroMain {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+.heroCrest {
+  width: 90px; height: 90px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.1);
+  border: 3px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #fff;
+  flex-shrink: 0;
+  backdrop-filter: blur(4px);
+}
+.heroInfo { flex: 1; }
+.heroRankBadge {
+  display: inline-block;
+  font-size: .68rem;
+  font-weight: 800;
+  background: rgba(255,255,255,.15);
+  color: rgba(255,255,255,.9);
+  padding: 4px 12px;
+  border-radius: 99px;
+  letter-spacing: .06em;
+  margin-bottom: .5rem;
+}
+.heroTeamName {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -.03em;
+  margin-bottom: .6rem;
+  line-height: 1.1;
+}
+.heroMeta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: .75rem;
+}
+.heroMeta span {
+  font-size: .75rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.6);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.heroForm {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.heroFormLabel {
+  font-size: .65rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.45);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-right: 2px;
+}
+
+
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  gap: 4px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 1.75rem;
+  width: fit-content;
+}
+.tab {
+  padding: 9px 26px;
+  border-radius: 9px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-size: .82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .18s;
+  font-family: inherit;
+}
+.tabActive {
+  background: #fff;
+  color: var(--tab-color, #0f172a);
+  box-shadow: 0 1px 6px rgba(0,0,0,.1);
+  font-weight: 800;
+}
+
+/* ── Squad Section ── */
+.squadSection { display: flex; flex-direction: column; gap: 2rem; }
+.posGroup {}
+.posGroupHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.posGroupBadge {
+  font-size: .62rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: .06em;
+}
+.posGroupLabel {
+  font-size: .9rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+.posGroupCount {
+  font-size: .72rem;
+  color: #94a3b8;
+  font-weight: 500;
+  margin-left: auto;
+}
+.playerCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+.playerCard {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.1rem .9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.05);
+  transition: transform .18s, box-shadow .18s;
+}
+.playerCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.1);
+}
+.playerCardNum {
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  align-self: flex-start;
+}
+.playerCardAvatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: #f8fafc;
+  border: 2.5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .75rem;
+  font-weight: 900;
+  color: #475569;
+}
+.playerCardName {
+  font-size: .78rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: center;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.captainBadge {
+  font-size: .55rem;
+  font-weight: 900;
+  background: #f59e0b;
+  color: #fff;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.posBadge {
+  font-size: .58rem;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: 5px;
+  letter-spacing: .04em;
+}
+.posGK { background: #fef9c3; color: #854d0e; }
+.posDF { background: #dcfce7; color: #15803d; }
+.posMF { background: #dbeafe; color: #1d4ed8; }
+.posFW { background: #fee2e2; color: #b91c1c; }
+
+
+
+/* ── Performers Section ── */
+.performersSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.performerCard {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.performerCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--p-color, #16a34a);
+}
+.performerCardTop {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+}
+.performerIcon { display: flex; align-items: center; }
+.performerType {
+  font-size: .65rem;
+  font-weight: 800;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.performerAvatar {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: #f8fafc;
+  border: 3px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .95rem;
+  font-weight: 900;
+  color: #475569;
+  margin: .25rem 0;
+}
+.performerName {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-align: center;
+}
+.performerTeam {
+  font-size: .72rem;
+  color: #64748b;
+  font-weight: 500;
+}
+.performerValue {
+  font-size: .8rem;
+  font-weight: 800;
+  padding: 6px 18px;
+  border-radius: 99px;
+  margin-top: 4px;
+}
+
+/* ── Form Dots ── */
+.formDot {
+  width: 26px; height: 26px;
+  border-radius: 8px;
+  font-size: .65rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formW { background: #dcfce7; color: #15803d; }
+.formD { background: #f1f5f9; color: #475569; }
+.formL { background: #fee2e2; color: #ef4444; }
+
+/* ── Back Button ── */
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 99px;
+  font-size: .78rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.85);
+  cursor: pointer;
+  transition: background .18s;
+  font-family: inherit;
+  backdrop-filter: blur(4px);
+}
+.backBtn:hover { background: rgba(255,255,255,.2); }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .page { padding: calc(68px + 1rem) 1rem 4rem; }
+  .teamsList { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .heroCrest { width: 70px; height: 70px; font-size: 1.1rem; }
+  .heroTeamName { font-size: 1.5rem; }
+  .tabs { width: 100%; }
+  .tab { flex: 1; text-align: center; padding: 9px 8px; }
+  .heroMain { gap: 1rem; }
+  .heroBannerContent { padding: 1.25rem 1.25rem 1.5rem; }
+  .playerCards { grid-template-columns: repeat(2, 1fr); }
+}
