@@ -503,10 +503,6 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.statTable {
-  width: 100%; min-width: 360px; border-collapse: collapse; font-size: .82rem;
-}
-
 .performerTableHeader {
   display: flex; align-items: center; gap: 10px;
   padding: 1rem 1.25rem;
@@ -525,7 +521,7 @@
 }
 
 .statTable {
-  width: 100%; border-collapse: collapse; font-size: .82rem;
+  width: 100%; min-width: 360px; border-collapse: collapse; font-size: .82rem;
 }
 
 .statTable thead tr { background: var(--bg2); }
@@ -537,6 +533,16 @@
   letter-spacing: .08em; border-bottom: 1px solid var(--border);
   white-space: nowrap;
 }
+
+/* sticky rank col */
+.statTable th:nth-child(1),
+.statTable td:nth-child(1) { position: sticky; left: 0; z-index: 2; background: #fff; }
+.statTable thead th:nth-child(1) { background: var(--bg2); z-index: 3; }
+
+/* sticky player col */
+.statTable th:nth-child(2),
+.statTable td:nth-child(2) { position: sticky; left: 32px; z-index: 2; background: #fff; box-shadow: 3px 0 6px rgba(0,0,0,.04); }
+.statTable thead th:nth-child(2) { background: var(--bg2); z-index: 3; }
 
 .statTable td {
   padding: .8rem 1rem;
