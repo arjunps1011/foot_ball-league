@@ -229,6 +229,7 @@ export default function HomePage() {
                 <span className={styles.performerTableIconWrap}>{icon}</span>
                 <span className={styles.performerTableTitle}>{title}</span>
               </div>
+              <div className={styles.performerTableScroll}>
               <table className={styles.statTable}>
                 <thead>
                   <tr><th>#</th><th>Player</th><th>Club</th><th>Apps</th><th>{label}</th></tr>
@@ -252,6 +253,7 @@ export default function HomePage() {
                   ))}
                 </tbody>
               </table>
+              </div>
             </div>
           ))}
         </div>

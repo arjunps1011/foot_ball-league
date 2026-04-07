@@ -222,6 +222,10 @@
   .statItem { border-bottom: 1px solid rgba(255,255,255,.1); }
 }
 
+@media (max-width: 640px) {
+  .homePage { padding-bottom: calc(60px + 1.5rem); }
+}
+
 /* ── Sections ── */
 .section { padding: 2.25rem 1.75rem 0; }
 
@@ -492,6 +496,15 @@
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-sm);
   overflow: hidden;
+}
+
+.performerTableScroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.statTable {
+  width: 100%; min-width: 360px; border-collapse: collapse; font-size: .82rem;
 }
 
 .performerTableHeader {
